@@ -10,8 +10,7 @@
 
 body{
     background: #e2cdcd;
-    padding-top: 10px;
-    
+    padding-top: 10px;    
 }
 
 .calculadora{
@@ -50,15 +49,21 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 20px;
     color: white;
-    text-align: center;
+    /* text-align: center; */
     cursor: pointer;
     border: 1px solid green;
-    /*width: 50px;*/    
+    /*width: 50px;*/ 
+    font-weight: 500;
+    border-radius: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;    
 }   
 
 .tecla:hover {
     background: lightblue;
-  }
+}
 
 .cero{
     /* grid-column-start: 1;

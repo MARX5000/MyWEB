@@ -12,30 +12,32 @@
 <body>
         
     <div class="container calculadora">
-
         <h1 class="text-center">Las Operaciones Básicas</h1>
 
-        <input type="number" value="">
-
-        <div class="botones">
-            <button class="tecla" type="button" style="background: yellow; grid-column: span 3;">C</button>
-            <button class="tecla" type="button">&divide;</button>
-            <button class="tecla" type="button">7</button>
-            <button class="tecla" type="button">8</button>
-            <button class="tecla" type="button">9</button>
-            <button class="tecla" type="button">&times;</button>
-            <button class="tecla" type="button">4</button>
-            <button class="tecla" type="button">5</button>
-            <button class="tecla" type="button">6</button>
-            <button class="tecla" type="button">&minus;</button>
-            <button class="tecla" type="button">1</button> <!-- style="grid-row: span 2;" -->
-            <button class="tecla" type="button">2</button>
-            <button class="tecla" type="button">3</button>
-            <button class="tecla" type="button">&plus;</button>
-            <button class="tecla cero" type="button">0</button> <!-- style="grid-column: span 3;" -->
-            <button class="tecla" type="button" style="background: green;">&equals;</button> 
-        </div>
-
+        <form name="frmcalculadora">
+            <input type="text" name="resultado" value="" placeholder="0" readonly>
+            <div class="botones">
+                <input class="tecla" value="C" type="reset" style="background: yellow; grid-column: span 3;">
+                <input class="tecla" value="&divide;" type="button" onclick="document.frmcalculadora.resultado.value+='/'">
+                <input class="tecla" value="7" type="button" onclick="document.frmcalculadora.resultado.value+='7'">
+                <input class="tecla" value="8" type="button" onclick="document.frmcalculadora.resultado.value+='8'">
+                <input class="tecla" value="9" type="button" onclick="document.frmcalculadora.resultado.value+='9'">
+                <input class="tecla" value="&times;" type="button" onclick="document.frmcalculadora.resultado.value+='*'">
+                <input class="tecla" value="4" type="button" onclick="document.frmcalculadora.resultado.value+='4'">
+                <input class="tecla" value="5" type="button" onclick="document.frmcalculadora.resultado.value+='5'">
+                <input class="tecla" value="6" type="button" onclick="document.frmcalculadora.resultado.value+='6'">
+                <input class="tecla" value="&minus;" type="button" onclick="document.frmcalculadora.resultado.value+='-'">
+                <input class="tecla" value="1" type="button" onclick="document.frmcalculadora.resultado.value+='1'"> 
+                <!-- style="grid-row: span 2;" -->
+                <input class="tecla" value="2" type="button" onclick="document.frmcalculadora.resultado.value+='2'">
+                <input class="tecla" value="3" type="button" onclick="document.frmcalculadora.resultado.value+='3'">
+                <input class="tecla" value="&plus;" type="button" onclick="document.frmcalculadora.resultado.value+='+'">
+                <input class="tecla cero" value="0" type="button" onclick="document.frmcalculadora.resultado.value+='0'"> 
+                <!-- style="grid-column: span 3;" -->
+                <input class="tecla" value="&equals;" type="button" style="background: green;" onclick="document.frmcalculadora.resultado.value=eval(document.frmcalculadora.resultado.value)">                 
+            </div>
+        </form>
+        
     </div>
 
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
