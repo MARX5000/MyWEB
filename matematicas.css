@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "numeros";
+    src: url("fuentes/SpaceMono-Bold.ttf");
+}
+
 *{
     box-sizing: border-box;
     margin: 0 auto;
@@ -27,6 +32,8 @@ body{
     width: 100%;
     text-align: right;
     margin-bottom: 10px;
+
+    font-family: numeros;
 }
 
 .botones{
@@ -48,6 +55,13 @@ body{
     border: 1px solid green;
     /*width: 50px;*/    
 }   
+
+.cero{
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+
+    grid-column: 1 / 4;
+}
 
 
 
